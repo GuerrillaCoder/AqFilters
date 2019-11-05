@@ -7,21 +7,13 @@ using ServiceStack;
 
 namespace AutoqueryManyToManyFilter.ServiceModel.Requests
 {
-    public class CategoryBookSearchRequest : QueryDb<Book, BookProduct>, IJoin<Book, BookBookFormat>
+    [QueryDb(QueryTerm.Or)]
+    public class BroadCategoryBookSearchRequest : QueryDb<Book, BookProduct>, IJoin<Book, BookBookFormat>
     {
-        [QueryDbField(Term = QueryTerm.Or)]
-        public string TitleContains { get; set; }
-        [QueryDbField(Term = QueryTerm.Or)]
-        public string AuthorNameContains { get; set; }
-        [QueryDbField(Term = QueryTerm.Or)]
-        public string AuthorNationalityContains { get; set; }
     }
 
+    [QueryDb(QueryTerm.Or)]
     public class AuthorRequestOr : QueryDb<Author>
     {
-        [QueryDbField(Term = QueryTerm.Or)]
-        public string AuthorNameContains { get; set; }
-        [QueryDbField(Term = QueryTerm.Or)]
-        public string AuthorNationalityContains { get; set; }
     }
 }
