@@ -5,8 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="ServiceStack" Version="5.7.1" />
-    <PackageReference Include="ServiceStack.Server.Core" Version="5.7.1" />
+    <PackageReference Include="ServiceStack" Version="5.8.1" />
+    <PackageReference Include="ServiceStack.Server.Core" Version="5.8.1" />
   </ItemGroup>
 
   <ItemGroup>
